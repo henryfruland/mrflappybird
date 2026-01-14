@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mr Flappy Bird</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root">
+    <canvas id="canvas" width="480" height="640"></canvas>
+    <div id="hud">Score: <span id="score">0</span> · Diamonds: <span id="diamonds">0</span> · Best: <span id="best">0</span></div>
+    <div id="powerInfo" class="power-info">Power: <span id="powerName">Normal</span> (<span id="powerCap">100</span>♦)</div>
+    <button id="superBtn" class="super-btn" title="Superpowers">Superpowers</button>
+    <button id="storageBtn" class="super-btn" title="Storage">Storage</button>
+    <button id="fsBtn" class="super-btn" title="Fullscreen">⤢</button>
+    <div id="powersPanel" class="powers-panel hidden" aria-hidden="true"></div>
+    <div id="storagePanel" class="powers-panel hidden" aria-hidden="true"></div>
+    <button id="tapBtn" class="touch-btn">Hold</button>
+    <div id="resultPanel" class="overlay hidden">
+      <div class="menu" id="resultMenu">
+        <!-- filled dynamically -->
+      </div>
+    </div>
+    <div id="overlay" class="overlay">
+      <div class="menu">
+        <h1>Mr Flappy Bird</h1>
+        <div class="controls">
+          <button id="startBtn">Start</button>
+          <button id="modeBtn">Mode: Medium</button>
+        </div>
+        <div id="modePanel" class="mode-panel hidden"></div>
+        <p>Hold the screen or press and hold Space / ArrowUp to fly.</p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

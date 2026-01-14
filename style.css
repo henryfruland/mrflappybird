@@ -1,0 +1,31 @@
+:root{--bg:#87CEEB;--ground:#D2B48C;--pipe:#2E8B57;--bird:#FFD700}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(to bottom,var(--bg),#bfe6ff);display:flex;align-items:center;justify-content:center}
+#root{position:relative;width:100%;height:100vh}
+canvas{display:block;width:100vw;height:100vh;border-radius:0;background:linear-gradient(#7ec8ff,#bfe6ff);box-shadow:none;display:block}
+#hud{position:absolute;left:12px;top:12px;color:#022;font-weight:600;text-shadow:0 1px 0 #fff}
+.power-info{position:absolute;right:56px;top:12px;color:#022;font-weight:600;text-shadow:0 1px 0 #fff}
+.super-btn{position:absolute;left:12px;top:46px;padding:8px 10px;border-radius:8px;border:none;background:rgba(255,255,255,0.95);box-shadow:0 4px 12px rgba(0,0,0,0.12);font-size:14px;z-index:220;cursor:pointer}
+.super-btn + .super-btn{left:136px}
+#fsBtn{right:12px;left:auto}
+.powers-panel{position:absolute;left:12px;top:88px;background:rgba(255,255,255,0.98);padding:8px;border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,0.12);width:260px;z-index:230}
+/* storage panel should appear on the right so it doesn't overlap the powers panel */
+#storagePanel{left:auto;right:12px;top:88px;z-index:230}
+/* overlay sits behind UI panels */
+.overlay{z-index:40}
+.powers-panel .power{display:flex;align-items:center;justify-content:space-between;padding:8px;border-radius:6px;margin-bottom:6px;background:#f7f9fb}
+.powers-panel .power:last-child{margin-bottom:0}
+.powers-panel .power button{border:none;background:transparent;font-weight:700}
+.hidden{display:none}
+.touch-btn{position:fixed;left:50%;transform:translateX(-50%);bottom:22px;padding:14px 28px;border-radius:999px;border:none;background:rgba(0,0,0,0.12);backdrop-filter:blur(6px);font-size:16px}
+#tapBtn{display:none}
+.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.menu{background:transparent;padding:0;border-radius:0;text-align:center;box-shadow:none;color:#012}
+.menu h1{margin-bottom:8px}
+.menu button{padding:10px 18px;border-radius:6px;border:none;background:#2e8b57;color:#fff;font-weight:700}
+.menu .controls{display:flex;gap:10px;justify-content:center;margin-bottom:8px}
+.mode-panel{position:absolute;left:50%;transform:translateX(-50%);top:170px;background:rgba(255,255,255,0.98);padding:8px;border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,0.12);width:240px;z-index:250}
+.mode-panel .mode{padding:8px;border-radius:6px;background:#f7f9fb;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+.mode-panel .mode:last-child{margin-bottom:0}
+@media (max-width:520px){#tapBtn{display:block}}
